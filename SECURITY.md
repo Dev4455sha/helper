@@ -1,0 +1,2 @@
+# Security notes
+The included local authentication is a development fallback only. For production use a server-side identity provider (for example Supabase Auth/Clerk/Auth0) plus database authorization/RLS. Never ship GEMINI_API_KEY in Vite/browser environment variables. Protect every private API with authenticated server sessions, validate ownership of record IDs, rate-limit auth/AI endpoints, validate file uploads, and log security events without storing passwords or secrets.
